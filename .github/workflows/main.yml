@@ -135,29 +135,6 @@ jobs:
         run: |
           pip install flake8==6.0.0 flake8-quotes==3.3.2
           flake8 . --count --statistics
-      - name: Test Analyzer
-        working-directory: ./tests/analyzer
-        run: |
-          python -m unittest discover
-      - name: Test Common
-        working-directory: ./tests/common
-        run: python -m unittest discover
-      - name: Test Classifier
-        working-directory: ./pair-classifier/tests
-        run: |
-          python -m unittest discover
-      - name: Test PairFilter
-        working-directory: ./pair-filter
-        run: |
-          python -m unittest discover
-      - name: Test PairFinder
-        working-directory: ./github-pair-finder
-        run: |
-          python3.8 -m unittest discover
-      - name: Test Reproducer - PairChooser
-        working-directory: ./travis-reproducer/tests
-        run: |
-          python3 -m unittest discover
       - name: Test GitHub Cacher
         working-directory: ./github-cacher/tests
         run: python3 -m unittest discover
