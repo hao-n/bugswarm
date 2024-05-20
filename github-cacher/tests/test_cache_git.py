@@ -33,7 +33,7 @@ class CacheGitTest(unittest.TestCase):
             os.chdir('/tmp')
         else:
             client = docker.from_env()
-            self.container = client.containers.run('bugswarm/githubactionsjobrunners:ubuntu-20.04',
+            self.container = client.containers.run('bugswarm/githubactionsjobrunners:ubuntu-22.04',
                                                    tty=True, detach=True, remove=False)
             self.container.exec_run(['mv', '/usr/bin/git', '/usr/bin/git_original'])
             self.container.exec_run(['mkdir', '-p', '/home/github'])
