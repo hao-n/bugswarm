@@ -103,7 +103,7 @@ jobs:
 
   bugswarm:
     name: Test in public repo
-    if: github.repository == 'BugSwarm/bugswarm'
+    if: github.repository == 'hao-n/bugswarm'
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
